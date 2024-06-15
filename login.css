@@ -1,0 +1,98 @@
+*{
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+input{
+    all: unset;
+    padding: 10px;
+    border: 1px solid rgb(219, 219, 219);
+    margin-top: 10px;
+}
+
+input:focus,
+input:active{
+    border: 1px solid rgba(38, 38, 38, 38, 0.4);
+}
+
+@media (max-width: 992px) and (min-width: 767px) {
+}
+
+/*Medium devices */
+@media (max-width: 768px) and (min-width: 576px) {
+}
+
+/*Small devices */
+@media (max-width: 578px) {
+    .phone-side{
+        display: none;
+    }
+    .border{
+        margin: auto!important;
+    }
+}
+
+.container{
+    margin-top: 100px;
+}
+
+footer .links ul{
+    text-decoration: none;
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+footer .links ul li{
+    padding-left: 20px;
+    font-size: 12px;
+}
+
+footer .copyright{
+    font-size: 15px;
+    display: flex;
+    justify-content: center;
+}
+
+
+button {
+    --color: #0077ff;
+    font-family: inherit;
+    height: 2.6em;
+    line-height: 2.5em;
+    overflow: hidden;
+    cursor: pointer;
+    margin-top: 10px;
+    font-size: 17px;
+    z-index: 1;
+    color: #fafafa;
+    border: 2px solid  rgb(80, 152, 235);
+    border-radius: 10px;
+    position: relative;
+    background-color: rgb(80, 152, 235);
+  }
+  
+  button::before {
+    position: absolute;
+    content: "";
+    background: var(--color);
+    width: 350px;
+    height: 200px;
+    z-index: -1;
+    border-radius: 35%;
+  }
+  
+  button:hover {
+    color: white;
+  }
+  
+  button:before {
+    top: 100%;
+    left: 100%;
+    transition: 0.3s all;
+  }
+  
+  button:hover::before {
+    top: -30px;
+    left: -30px;
+  }

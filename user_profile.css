@@ -1,0 +1,282 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+
+/* CSS Reset */
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+}
+
+*,
+button,
+input,
+select,
+textarea {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+}
+
+/* Vars */
+:root {
+    --primary: hsl(0, 0%, 100%);
+    --secondary: hsl(0, 0%, 98%);
+    --border: hsl(0, 0%, 86%);
+
+    --story-border: hsl(0, 0%, 78%);
+    --img-border: hsla(0, 0%, 0%, 0.1);
+
+    --text-dark: hsl(0, 0%, 15%);
+    --text-light: hsl(0, 0%, 60%);
+
+    --like: hsl(355, 82%, 61%);
+    --link: hsl(204, 100%, 48%);
+
+    --header-height: 44px;
+    --nav-height: 44px;
+}
+
+:root.darkTheme {
+    --primary: hsl(0, 0%, 0%);
+    --secondary: hsl(0, 0%, 2%);
+    --border: hsl(0, 0%, 15%);
+
+    --story-border: hsl(0, 0%, 44%);
+    --img-border: hsla(0, 0%, 100%, 0.1);
+
+    --text-dark: hsl(0, 0%, 98%);
+    --text-light: hsl(0, 0%, 60%);
+}
+
+.sidebar {
+    position: fixed;
+    /* Change to fixed */
+    top: 0;
+    /* Add top positioning */
+    bottom: 0;
+    /* Add bottom positioning */
+    width: 15%;
+    padding: 0;
+    margin: 0;
+    border: 1px solid black;
+}
+
+.logo {
+    position: relative;
+    padding-top: 38px;
+    padding-left: 20px;
+    padding-bottom: 12px;
+
+}
+
+.logo img {
+    height: 32px;
+    width: 103px;
+}
+
+.sidebar .sidebar-items {
+    position: relative;
+    padding-left: 0;
+    padding-top: 5px;
+    margin-top: 20px;
+
+}
+
+.sidebar .sidebar-items li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.sidebar .sidebar-items li a {
+    display: flex;
+    font-size: 18px;
+    padding: 0px 0px 35px 15px;
+    text-decoration: none;
+    color: black;
+}
+
+.sidebar .sidebar-items li i {
+    font-size: 22px;
+}
+
+.sidebar .sidebar-items li a span {
+    padding-left: 15px;
+}
+
+.sidebar .more-items {
+    position: relative;
+    padding-left: 12px;
+    padding-top: 5px;
+    margin-top: 240px;
+    display: flex;
+    flex-direction: column;
+}
+
+.sidebar .more-items ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    flex: 1;
+    justify-content: flex-end;
+}
+
+.sidebar .more-items li a {
+    display: flex;
+    font-size: 18px;
+    padding: 0px 0px 35px 15px;
+    text-decoration: none;
+    color: black;
+}
+
+.sidebar .more-items li i {
+    font-size: 22px;
+}
+
+.sidebar .more-items li a span {
+    padding-left: 15px;
+}
+
+.profile {
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    /* Add positioning */
+    left: 27.5%;
+    top: 25px;
+    /* Add 1.5% to account for the padding on the container */
+    width: 55%;
+    height: 150%;
+    padding: 0;
+    margin: 0;
+}
+
+.profile .user_follow{
+    margin: 0 100px;
+}
+
+.profile .user_follow .username {
+    font-size: 25px;
+}
+
+.profile .user_follow .follow-button {
+    background-color: rgb(86, 144, 213);
+    border: 1px solid  rgb(86, 144, 213);
+     width: 65px;
+    height: 35px;
+    border-radius: 5px; 
+    margin: 0 80px;
+    font-size: 13px;
+    font-weight: 500;
+    color: rgb(212, 229, 255);
+    cursor: pointer;
+}
+
+.profile .user_follow .following-button {
+    background-color: transparent;
+    border: 1px solid #6f6d6d;
+    width: 85px;
+    height: 25px;
+    border-radius: 5px; 
+    margin: 0 80px;
+    font-size: 13px;
+    font-weight: 500;
+    color: #6f6d6d;
+    cursor: pointer;
+
+}
+
+.user_post {
+    position: relative;
+    /* Add positioning */
+    left: 27.5%;
+    top: 55px;
+    /* Add 1.5% to account for the padding on the container */
+    width: 55%;
+    height: 150%;
+    padding: 0;
+    margin: 0;
+}
+
+.user_post .posts-container{
+    width: 675px;
+    border: 1px solid #6d6d6d;
+    border-radius: 8px;
+    margin: 0 0 45px;
+}
+
+.posts-container .post_header {
+    display: flex;
+}
+
+.posts-container .post_header .username {
+    margin-left: 13px;
+    align-content: center;
+    font-weight: bold;
+}
+
+.posts-container .photo {
+    width: 675px;
+    height: 411px;
+}
+
+.posts-container .photo .images-container img{
+    max-height: 411px;
+    object-fit: contain;
+}
+
+.posts-container .post_description{
+    margin-top: 20px;
+}
+
+.posts-container .post_description .photo__icon{
+    margin-right: 20px;
+}
+
+.posts-container .post_description .captionportion{
+    font-size: 20px;
+    margin-top: 10px;
+}
+
+.posts-container .post_description .commentportion{
+    text-decoration: none;
+    margin-top: 20px;
+}
+.posts-container .post_description .comment {
+    opacity: .7;
+    margin-top: 20px;
+}
+.posts-container .post_description .commentportion .commenttype{
+    text-decoration: none;
+    border: none;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    height: 40px;
+    width: 350px;
+    font-size: 15px;
+}
+.posts-container .post_description .commentportion .commenttype::placeholder{
+    padding-left: 10px;
+}
+.posts-container .post_description .commentportion .fa-paper-plane-o{
+    padding-left: 20px;
+    font-size: 20px;
+}
+
+.notifModal {
+    display: none;
+    /* Hidden by default */
+    position: fixed;
+    z-index: 1;
+    /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%;
+    /* Full width */
+    height: 100%;
+    /* Full height */
+    overflow: hidden;
+    /* Enable scroll if needed */
+    background-color: rgba(0, 0, 0, 0.4);
+    /* Black w/ opacity */
+    backdrop-filter: blur(1px);
+}
